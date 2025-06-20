@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar.astro';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
     <title>Antonella | Portfolio</title>
   </head>
   <body class="bg-white text-black dark:bg-zinc-900 dark:text-white transition-colors duration-300">
@@ -14,5 +15,25 @@ import Navbar from '../components/Navbar.astro';
     <main class="px-4 sm:px-8 max-w-5xl mx-auto mt-8">
       <slot />
     </main>
+    <script>
+      const toggle = document.getElementById('toggle-dark');
+      const icon = document.getElementById('theme-icon');
+
+      function applyDarkMode(value: boolean) {
+        document.documentElement.classList.toggle('dark', value);
+        localStorage.setItem('theme', value ? 'dark' : 'light');
+        if (icon) icon.textContent = value ? '🌙' : '☀️';
+      }
+
+      toggle?.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.contains('dark');
+        applyDarkMode(!isDark);
+      });
+
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        applyDarkMode(true);
+      }
+    </script>
   </body>
 </html>
