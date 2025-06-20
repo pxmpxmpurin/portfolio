@@ -18,12 +18,10 @@ import Navbar from '../components/Navbar.astro';
     </main>
     <script>
       const toggle = document.getElementById('toggle-dark');
-      const icon = document.getElementById('theme-icon');
 
       function applyDarkMode(value: boolean) {
         document.documentElement.classList.toggle('dark', value);
         localStorage.setItem('theme', value ? 'dark' : 'light');
-        if (icon) icon.textContent = value ? '🌙' : '☀️';
       }
 
       toggle?.addEventListener('click', () => {
