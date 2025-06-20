@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const skills = [
+  'HTML5',
+  'CSS3',
+  'JavaScript',
+  'TypeScript',
+  'TailwindCSS',
+  'Angular',
+  '.NET',
+  'Astro',
+  'Git & GitHub',
+  'Responsive Design',
+];
+---
+
+<BaseLayout>
+  <section class="mt-20 max-w-4xl mx-auto px-4">
+    <h1 class="text-3xl font-bold mb-8">Skills</h1>
+    <div class="flex flex-wrap gap-3">
+      {skills.map(skill => (
+        <span class="px-3 py-1 text-sm font-medium rounded-full bg-zinc-200 dark:bg-zinc-700 text-zinc-900 dark:text-white">
+          {skill}
+        </span>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
