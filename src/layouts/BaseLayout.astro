@@ -1,0 +1,18 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+---
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antonella | Portfolio</title>
+  </head>
+  <body class="bg-white text-black dark:bg-zinc-900 dark:text-white transition-colors duration-300">
+    <Navbar />
+    <main class="px-4 sm:px-8 max-w-5xl mx-auto mt-8">
+      <slot />
+    </main>
+  </body>
+</html>
