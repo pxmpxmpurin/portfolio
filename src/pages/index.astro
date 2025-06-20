@@ -1,15 +1,52 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout>
-  <section class="text-center mt-16">
-    <p class="text-black dark:text-pink-500">Modo oscuro test</p>
+  <section id="inicio" class="text-center my-12">
+    <h2 class="text-xl tracking-wide text-[#e7d3c9] italic">Bienvenid@ al rincón de</h2>
+    <h1 class="text-5xl font-display text-[#f6e4d7] font-bold mb-4">pxmpxmpurin</h1>
+    <p class="max-w-md mx-auto text-[#bfa99e] text-sm leading-relaxed">
+      Desarrolladora web & fan de lo oscuro, lo kawaii y el código elegante.
+    </p>
+    <div class="mt-8">
+      <img src="/portfolio/images/purin-goth.png" alt="Pompompurin gótico" class="rounded-full w-36 h-36 mx-auto border-2 border-[#e7d3c9] shadow-lg" />
+    </div>
+  </section>
 
-    <h2 class="text-3xl font-bold mb-4">Hola, soy Antonella 👋</h2>
-    <p class="text-lg max-w-xl mx-auto">Desarrolladora Fullstack | Apasionada por la tecnología y el diseño</p>
-    <a href="/portfolio/projects/" class="mt-6 inline-block px-6 py-2 bg-black text-white dark:bg-white dark:text-black rounded-lg shadow hover:scale-105 transition">
-      Ver Proyectos
-    </a>
+  <section id="proyectos" class="mt-16">
+    <h2 class="text-2xl text-[#f6e4d7] font-bold mb-6 text-center flex items-center justify-center gap-2">
+      <span class="inline-block w-4 h-px bg-[#f6e4d7]"></span>
+          <a
+            href="/portfolio/projects"
+            class="
+            px-4 
+            py-2 
+            rounded-full 
+            border 
+            border-[#f6e4d7] 
+            text-[#f6e4d7] 
+            hover:bg-[#f6e4d7] 
+            hover:text-black 
+            transition-colors 
+            duration-300 
+            font-semibold 
+            shadow-md"
+          >
+            Proyectos
+          </a>
+      <span class="inline-block w-4 h-px bg-[#f6e4d7]"></span>
+    </h2>
+    <div class="bg-[#1b1a1a] border border-[#c8b3a5] rounded-2xl p-6 max-w-xl mx-auto shadow-inner">
+      <div class="flex gap-4 items-center">
+        <img src="/portfolio/images/animalese.png" alt="Animalese Typing" class="w-24 h-24 rounded-lg border border-[#f6e4d7]" />
+        <div>
+          <h3 class="text-lg font-bold text-[#f6e4d7]">Animalese Typing</h3>
+          <p class="text-sm text-[#d0bfb7] mt-1">
+            Programa de Windows que reproduce sonidos estilo Animal Crossing al escribir.
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 </BaseLayout>
