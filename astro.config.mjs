@@ -1,11 +1,14 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
-import tailwindcss from '@tailwindcss/vite';
+import tailwind from '@tailwindcss/postcss';
+import autoprefixer from 'autoprefixer';
 
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://pxmpxmpurin.github.io',
+  site: 'https://pxmpxmpurin.github.io/portfolio',
   vite: {
-    plugins: [tailwindcss()],
+    css: {
+      postcss: {
+        plugins: [tailwind(), autoprefixer()],
+      },
+    },
   },
 });
